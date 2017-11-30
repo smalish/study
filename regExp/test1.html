@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>正则表达式</title>
+  </head>
+  <style media="screen">
+
+  </style>
+  <body>
+
+    <script type="text/javascript">
+
+    // //replace
+    // var str = "abcdefg[name=111111111111,xyz=22222][name=3333,xyz=444444]";
+    // var reg = /name=((\w|-|\s)+),xyz=((\w|-|\s)+)/ig;
+    // var res = [];
+    // str.replace(reg, function(s,value) {
+    // res.push(value); // value 就是 1234565
+    // });
+    // console.log(res);
+
+    // // match
+    // var reg = /\{[^\}]+\}/g;
+    // var str  = "如何匹配到 {A0111} 和 {A0117}  现在好像只能匹配一个。";
+    // str.match(reg);
+
+    // //replace中的$1,$2...
+    // var str="Tom Join";
+    // var re=/(\w+)\W+(\w+)/g;
+    // str.replace(re,"$2 $1");
+
+    // // 获取字符串里每一个img标签的src,width,height,因为不确定三个属性的顺序，所以分别获取合适
+    // var str = "<img class='img' src='http://img7x0.ddimg.cn/Community71/41/28/362480-reviewimg-1_p.jpg' style='width:100px;height:200px;' ><img class='img' src='http://2222222222.jpg' style='height:300px;' >"
+    // // 获取img标签数组
+    // var reg = /\<\s*img[^\>]+\>/g;
+    // var img_arr = str.match(reg);
+    // // 获取每个img标签的属性
+    // img_arr.forEach(function(value, index){
+
+    //   var reg_src = /.*src\s*=\s*['|"]\s*([^'"]+).*/i;
+    //   var src = value.match(reg_src)? value.match(reg_src)[1] : '';
+    //   console.log(src);
+
+    //   var reg_width = /.*width\s*[:：]([^;'"]+).*/i;
+    //   var width = value.match(reg_width)? value.match(reg_width)[1] : '';
+    //   console.log(width);
+
+    //   var reg_height = /.*height\s*[:：]([^;'"]+).*/i;
+    //   var height = value.match(reg_height)? value.match(reg_height)[1] : '';
+    //   console.log(height);
+
+    // })
+
+    // 获取<ul>标签里的内容
+    var str="<ul>    leslie </ul><ul>  xiecanyong</ul>";
+    var ul_arr = str.match(/<ul>([^<]*)<\/ul>/i)
+    console.log(ul_arr);
+
+
+    </script>
+  </body>
+</html>
